@@ -4,20 +4,20 @@ use Core\Routing\Router;
 use Core\Foundation\Application;
 
 /**
- * Créer l'application
+ * Create the app.
  */
 
 /**
- * Instancier Router
+ * Instantiate the Router.
  */
 $router = Router::getInstance();
 
 /**
- * Instancier Application
+ * Instantiate the app.
  */
 $app = new Application($router);
 
 /**
- * Retourner Application
+ * Return app.
  */
 return $app;

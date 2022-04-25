@@ -2,6 +2,9 @@
     "name": "dev-and-web/mvc",
     "description": "PHP MVC example",
     "keywords": ["php","mvc","design","pattern","example"],
+    "require": {
+        "php": "^8.1"
+    },
     "authors": [
         {
             "name": "Stephen Damian",

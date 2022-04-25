@@ -8,7 +8,7 @@ namespace Core\Http;
 class Input
 {
     /**
-     * Verif si donnée envoyé en POST existe
+     * Check if data sent in POST exists.
      *
      * @param string $name
      * @return bool
@@ -19,18 +19,18 @@ class Input
     }
 
     /**
-     * Si donnée envoye en POST, et si ce $name existe -> return $_POST['name']
+     * If data is sent in POST, and if this $name exists -> return $_POST['name'].
      *
      * @param string $name
-     * @return array|null
+     * @return array|string
      */
     public static function post(string $name)
     {
-        return isset($_POST[$name]) && $_POST[$name] != '' ? $_POST[$name] : '';
+        return isset($_POST[$name]) && $_POST[$name] !== '' ? $_POST[$name] : '';
     }
 
     /**
-     * Verif si donnée envoyé en GET existe
+     * Check if data sent in GET exists.
      *
      * @param string $name
      * @return bool
@@ -41,13 +41,13 @@ class Input
     }
 
     /**
-     * Si donnée envoye en GET, et si ce $name existe -> return $_GET['name']
+     * If data is sent in GET, and if this $name exists -> return $_GET['name'].
      *
      * @param string $name
-     *  @return array|null - Donnée envoyée en GET
+     * @return array|string
      */
     public static function get(string $name)
     {
-        return isset($_GET[$name]) && $_GET[$name] != '' ? $_GET[$name] : '';
+        return isset($_GET[$name]) && $_GET[$name] !== '' ? $_GET[$name] : '';
     }
 }

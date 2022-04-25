@@ -3,7 +3,7 @@
 namespace Core\Model;
 
 /**
- * Model parent
+ * Parent model.
  */
 abstract class BaseModel
 {

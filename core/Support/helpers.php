@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Path du dossier racine public
+ * Public Root Folder Path.
  *
  * @param string|null $file
  * @return mixed
@@ -9,14 +9,14 @@
 function public_path(string $file = null)
 {
     if ($file) {
-        return dirname(dirname(dirname(__FILE__))).'/www'.'/'.$file;
+        return dirname(dirname(dirname(__FILE__))).'/public'.'/'.$file;
     }
 
-    return dirname(dirname(dirname(__FILE__))).'/www';
+    return dirname(dirname(dirname(__FILE__))).'/public';
 }
 
 /**
- * Path du dossier racine qui contient toute l'application
+ * Path of the root folder which contains the whole application.
  *
  * @param string|null $file
  * @return mixed

@@ -9,7 +9,7 @@ use Core\Http\Response;
 use Core\Exception\ExceptionHandler;
 
 /**
- * Gestion du Routing
+ * Routing management.
  */
 class Router implements RouterInterface
 {
@@ -19,21 +19,21 @@ class Router implements RouterInterface
     private static $instance;
 
     /**
-     * URI
+     * URI.
      *
      * @var string
      */
-    private $uri = '';
+    private string $uri = '';
 
     /**
-     * Routes
+     * Routes.
      *
      * @var array
      */
-    private $routes = [];
+    private array $routes = [];
 
     /**
-     *  Routerconstructor.
+     *  Router constructor.
      */
     private function __construct()
     {
@@ -41,7 +41,7 @@ class Router implements RouterInterface
     }
 
     /**
-     * Singleton
+     * Singleton.
      *
      * @return mixed
      */
@@ -55,21 +55,15 @@ class Router implements RouterInterface
     }
 
     /**
-     * Setter de l'URI
+     * URI setter.
      */
     private function setUri()
     {
-        if (Input::hasGet('uri')) {
-            $this->uri = ltrim(Input::get('uri'), '/');
-
-            if (strpos(Request::getRequestUri(), '?uri=') !== false) {      
-                Response::redirect($this->uri, 301);
-            }
-        }
+        $this->uri = ltrim(Request::getRequestUri(), '/');
     }
 
     /**
-     * Ajouter une route
+     * Add a route.
      *
      * @param string $path
      * @param string $action
@@ -80,14 +74,14 @@ class Router implements RouterInterface
     }
 
     /**
-     * Executer le Routing
+     * Execute Routing.
      *
      * @return mixed
      */
     public function run()
     {
         foreach ($this->routes as $path => $action) {
-            if ($this->uri == $path) {
+            if ($this->uri === $path) {
                 return $this->executeAction($action);
             }
         }
@@ -96,7 +90,7 @@ class Router implements RouterInterface
     }
 
     /**
-     * Executer l'action
+     * Execute action.
      *
      * @param string $action
      * @throws ExceptionHandler
@@ -122,7 +116,7 @@ class Router implements RouterInterface
     }
 
     /**
-     * Retourner une erreur 404
+     * Return a 404 error.
      *
      * @return mixed
      */

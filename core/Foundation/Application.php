@@ -5,17 +5,17 @@ namespace Core\Foundation;
 use Core\Contracts\Routing\RouterInterface;
 
 /**
- * Pour créer l'application
+ * To create the app.
  */
 class Application
 {
     /**
      * @var RouterInterface
      */
-    private $router;
+    private RouterInterface $router;
 
     /**
-     *  Applicationconstructor.
+     *  Application constructor.
      *
      * @param RouterInterface $router
      */
@@ -25,7 +25,7 @@ class Application
     }
 
     /**
-     * Cahrger la liste des routes et exécuter le Routing
+     * Load the list of routes and run the Routing.
      */
     public function run()
     {

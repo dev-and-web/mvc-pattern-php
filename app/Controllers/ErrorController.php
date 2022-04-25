@@ -3,12 +3,12 @@
 namespace App\Controllers;
 
 /**
- * Gestion des erreurs
+ * Error management.
  */
 class ErrorController extends Controller
 {
     /**
-     * Erreur HTTP 404
+     * HTTP Error 404.
      */
     public function show404()
     {

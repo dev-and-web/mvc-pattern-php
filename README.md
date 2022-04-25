@@ -1,4 +1,4 @@
-# MVC pattern (Model-View-Controller) - Example - PHP 7
+# MVC pattern (Model-View-Controller) - Example - PHP 8.1
 
 
 
@@ -6,8 +6,8 @@
 ### Author
 
 Author of this example:
-[Développeur web](https://www.devandweb.fr)
-[![Developpeur Freelance](https://www.devandweb.fr/medias/app/website/developpeur-web.png)](https://www.devandweb.fr)
+[Freelance PHP](https://www.devandweb.fr)
+[![PHP Freelance](https://www.devandweb.fr/medias/app/website/developpeur-web.png)](https://www.devandweb.fr)
 
 
 
@@ -16,7 +16,7 @@ Author of this example:
 
 ## English Documentation:
 
-This package is example in PHP 7 of a Design Pattern MVC (Model-View-Controller)
+This package is example in PHP 8.1 of a Design Pattern MVC (Model-View-Controller)
 
 ### Here are the steps to follow to see this test this package :
 
@@ -39,7 +39,7 @@ There are other pattern design examples here:
 
 ## Documentation Française :
 
-Ce package est un exemple en PHP 7 du Design Pattern MVC (Modèle-Vue-Contrôleur)
+Ce package est un exemple en PHP 8.1 du Design Pattern MVC (Modèle-Vue-Contrôleur)
 
 ### Voici les étapes à suivre pour tester ce package :
 

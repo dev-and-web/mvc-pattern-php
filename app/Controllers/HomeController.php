@@ -3,12 +3,12 @@
 namespace App\Controllers;
 
 /**
- * Gestion de la page d'accueil
+ * Home page management.
  */
 class HomeController extends Controller
 {
     /**
-     * Listing des articles
+     * Website home page.
      */
     public function show()
     {

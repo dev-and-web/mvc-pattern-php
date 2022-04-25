@@ -10,7 +10,7 @@ use Core\Exception\ExceptionHandler;
 class Response
 {
     /**
-     * Codes des réponses HTTP
+     * HTTP response codes.
      */
     const STATUS_CODE = [
         // Information 1xx
@@ -96,7 +96,7 @@ class Response
 
 
     /**
-     * Spécifier l'en-tête HTTP de l'affichage d'une vue
+     * Specify the HTTP header for displaying a view.
      *
      * @param string $content
      * @param string|null $type
@@ -111,12 +111,12 @@ class Response
     }
     
     /**
-     * Rediriger
+     * Redirect.
      *
-     * @param string $url - url vers où regiriger visiteur
-     * @param null|int $httpResponseCodeParam - Code de la réponse HTTP
+     * @param string $url - url where to redirect visitor.
+     * @param null|int $httpResponseCodeParam - HTTP response code.
      */
-    public static function redirect(string $url, $httpResponseCodeParam = null)
+    public static function redirect(string $url, int $httpResponseCodeParam = null)
     {
         if ($httpResponseCodeParam) {
             if (array_key_exists($httpResponseCodeParam, self::STATUS_CODE)) {

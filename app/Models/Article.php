@@ -3,7 +3,7 @@
 namespace App\Models;
 
 /**
- * Model des articles
+ * Model of articles.
  */
 class Article extends Model
 {

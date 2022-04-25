@@ -8,18 +8,18 @@ namespace Core\Http;
 class Request
 {
     /**
-     * @param string $method - Méthode passé en paramètre
-     * @return bool - True si request method est égal à method passé en paramètre
+     * @param string $method - HTTP method passed as a parameter.
+     * @return bool - True if request method is equal to method passed as parameter.
      */
     public static function isMethod(string $method): bool
     {
-        return $this->getMethod() === strtoupper($method);
+        return self::getMethod() === strtoupper($method);
     }
 
     /**
-     * @return string - Méthode utilisée pour accéder à la page. 'GET', 'POST', 'PUT', 'PATCH', 'DELETE'...
+     * @return string - HTTP method used to access the page. 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', etc.
      */
-    public static function getMethod()
+    public static function getMethod(): string
     {
         $methodPost = strtoupper(Input::post('_method'));
 
@@ -31,9 +31,9 @@ class Request
     }
 
     /**
-     * @return string - L'URI qui a été fourni pour accéder à cette page
+     * @return string - The URI that was provided to access this page.
      */
-    public static function getRequestUri()
+    public static function getRequestUri(): string
     {
         return $_SERVER['REQUEST_URI'];
     }

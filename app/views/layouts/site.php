@@ -11,13 +11,13 @@
 </head>
 <body>
 	<header>
-
+        <p>Header content</p>
 	</header>
 
 	<?php echo $contentInLayout;  // VUE ?>
 
 	<footer>
-
+        <p>Footer content</p>
 	</footer>
 </body>
 </html>

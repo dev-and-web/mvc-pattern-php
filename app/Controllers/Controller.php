@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Core\Controller\BaseController;
 
 /**
- * Controlelr parent de l'application
+ * Application's parent Controller.
  */
 abstract class Controller extends BaseController
 {

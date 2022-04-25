@@ -3,7 +3,7 @@
 use Core\Routing\Router;
 
 /**
- * Liste des routes
+ * List of routes.
  */
 
 $router = Router::getInstance();

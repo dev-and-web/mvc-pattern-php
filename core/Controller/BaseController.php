@@ -5,19 +5,21 @@ namespace Core\Controller;
 use Core\Http\Response;
 
 /**
- * Controller parent
+ * Parent Controller.
  */
 abstract class BaseController
 {
     /**
-     * Pour éventuellement utiliser un autre layout que celui par defaut
+     * To possibly use a layout other than the default one.
      *
      * @var string
      */
-    private $layout;
+    private string $layout;
 
     /**
-     * BaseController constructor.
+     *  BaseController constructor.
+     *
+     * @param RouterInterface $router
      */
     public function __construct()
     {
@@ -25,7 +27,7 @@ abstract class BaseController
     }
 
     /**
-     * Eventuellement utiliser un autre layout que celui par defaut
+     * To possibly use a layout other than the default one.
      *
      * @param string $layout
      */
@@ -35,10 +37,10 @@ abstract class BaseController
     }
 
     /**
-     * Return vue
+     * Return view.
      *
-     * @param string $view - Fichier View à charger
-     * @param array $data - Pour passer d'éventuels données à la vue
+     * @param string $view - View file to load.
+     * @param array $data - To pass any data to the view.
      */
     final protected function view(string $view, array $data = [])
     {       
@@ -54,7 +56,7 @@ abstract class BaseController
     }
 
     /**
-     * Spécifier l'en-tête HTTP de l'affichage d'une vue
+     * Specify the HTTP header for displaying a view.
      *
      * @param string $content
      * @param string|null $type

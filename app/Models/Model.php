@@ -5,7 +5,7 @@ namespace App\Models;
 use Core\Model\BaseModel;
 
 /**
- * Model parent
+ * Parent model.
  */
 abstract class Model extends BaseModel
 {

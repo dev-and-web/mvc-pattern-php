@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Point d'entrée
+ * Entry point.
  */
 
 require __DIR__.'/../bootstrap/autoload.php';
