@@ -97,11 +97,8 @@ class Response
 
     /**
      * Specify the HTTP header for displaying a view.
-     *
-     * @param string $content
-     * @param string|null $type
      */
-    public static function header(string $content, string $type = null)
+    public static function header(string $content, string $type = null): void
     {
         if ($type) {
             header($content.': '.$type.'; charset=UTF-8');
@@ -113,10 +110,10 @@ class Response
     /**
      * Redirect.
      *
-     * @param string $url - url where to redirect visitor.
+     * @param string $url - URL where to redirect visitor.
      * @param null|int $httpResponseCodeParam - HTTP response code.
      */
-    public static function redirect(string $url, int $httpResponseCodeParam = null)
+    public static function redirect(string $url, int $httpResponseCodeParam = null): never
     {
         if ($httpResponseCodeParam) {
             if (array_key_exists($httpResponseCodeParam, self::STATUS_CODE)) {

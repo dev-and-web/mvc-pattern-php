@@ -20,15 +20,11 @@ class Router implements RouterInterface
 
     /**
      * URI.
-     *
-     * @var string
      */
     private string $uri = '';
 
     /**
      * Routes.
-     *
-     * @var array
      */
     private array $routes = [];
 
@@ -42,10 +38,8 @@ class Router implements RouterInterface
 
     /**
      * Singleton.
-     *
-     * @return mixed
      */
-    public static function getInstance()
+    public static function getInstance(): self
     {
         if (self::$instance === null) {
             self::$instance = new self();
@@ -57,28 +51,23 @@ class Router implements RouterInterface
     /**
      * URI setter.
      */
-    private function setUri()
+    private function setUri(): void
     {
         $this->uri = ltrim(Request::getRequestUri(), '/');
     }
 
     /**
      * Add a route.
-     *
-     * @param string $path
-     * @param string $action
      */
-    public function add(string $path, string $action)
+    public function add(string $path, string $action): void
     {
         $this->routes[$path] = $action;
     }
 
     /**
      * Execute Routing.
-     *
-     * @return mixed
      */
-    public function run()
+    public function run(): mixed
     {
         foreach ($this->routes as $path => $action) {
             if ($this->uri === $path) {
@@ -92,11 +81,9 @@ class Router implements RouterInterface
     /**
      * Execute action.
      *
-     * @param string $action
      * @throws ExceptionHandler
-     * @return mixed
      */
-    private function executeAction(string $action)
+    private function executeAction(string $action): mixed
     {
         list($controller, $method) = explode('@', $action);
 
@@ -117,10 +104,8 @@ class Router implements RouterInterface
 
     /**
      * Return a 404 error.
-     *
-     * @return mixed
      */
-    private function executeError404()
+    private function executeError404(): mixed
     {
         $error = new \App\Controllers\ErrorController();
 

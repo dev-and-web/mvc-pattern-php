@@ -11,15 +11,11 @@ abstract class BaseController
 {
     /**
      * To possibly use a layout other than the default one.
-     *
-     * @var string
      */
     private string $layout;
 
     /**
      *  BaseController constructor.
-     *
-     * @param RouterInterface $router
      */
     public function __construct()
     {
@@ -31,18 +27,15 @@ abstract class BaseController
      *
      * @param string $layout
      */
-    final protected function setLayout(string $layout)
+    final protected function setLayout(string $layout): void
     {
         $this->layout = $layout;
     }
 
     /**
      * Return view.
-     *
-     * @param string $view - View file to load.
-     * @param array $data - To pass any data to the view.
      */
-    final protected function view(string $view, array $data = [])
+    final protected function view(string $view, array $data = []): never
     {       
         if ($data) extract($data);
 
@@ -57,11 +50,8 @@ abstract class BaseController
 
     /**
      * Specify the HTTP header for displaying a view.
-     *
-     * @param string $content
-     * @param string|null $type
      */
-    final protected function header(string $content, string $type = null)
+    final protected function header(string $content, string $type = null): void
     {
         Response::header($content, $type);
     }

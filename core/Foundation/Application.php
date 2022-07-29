@@ -16,8 +16,6 @@ class Application
 
     /**
      *  Application constructor.
-     *
-     * @param RouterInterface $router
      */
     public function __construct(RouterInterface $router)
     {
@@ -27,7 +25,7 @@ class Application
     /**
      * Load the list of routes and run the Routing.
      */
-    public function run()
+    public function run(): void
     {
         $this->router->run();
     }

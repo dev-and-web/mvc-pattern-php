@@ -5,24 +5,17 @@ namespace Core\Contracts\Routing;
 interface RouterInterface
 {
     /**
-     * Singleton
-     *
-     * @return mixed
+     * Singleton.
      */
-    public static function getInstance();
+    public static function getInstance(): self;
 
     /**
-     * Ajouter une route
-     *
-     * @param string $path
-     * @param string $action
+     * Add a route.
      */
-    public function add(string $path, string $action);
+    public function add(string $path, string $action): void;
 
     /**
-     * Executer le Routing
-     *
-     * @return mixed
+     * Execute Routing.
      */
-    public function run();
+    public function run(): mixed;
 }
